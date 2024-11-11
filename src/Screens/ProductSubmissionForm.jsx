@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
 import { Upload, Mail, DollarSign, Tag, Loader2, ImageIcon, Sparkles } from 'lucide-react'
@@ -151,7 +152,6 @@ export default function ProductSubmissionForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 ">
                 <div className="flex flex-col items-center justify-center text-center">
                     <img src={commerce} alt="Commerce" className="w-full mb-6" />
-                    {/* <p className="text-grey-600 text-lg mb-6" style={{ fontFamily: 'Ubuntu', fontWeight: '300' }}>Empowering Women Entrepreneurs to Succeed</p> */}
                 </div>
 
                 <div className="max-w-full md:max-w-2xl p-6 bg-white rounded-lg shadow-lg mb-24 md:mb-0">
