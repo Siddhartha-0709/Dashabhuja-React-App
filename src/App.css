@@ -45,3 +45,8 @@
   font-weight: 700;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'Samkaran';
+  src: url('../src/fonts/samkaran.TTF') format('truetype');
+}
