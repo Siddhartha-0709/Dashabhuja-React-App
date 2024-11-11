@@ -30,7 +30,11 @@ function Footprints() {
             setLoading(false);
         }
     };
-
+    useEffect(() => {
+        const timer = setInterval(() => window.location.reload(), 10000);
+        return () => clearInterval(timer);
+    }, []);
+    
     useEffect(() => {
         if (id) {
             getFootprints();
@@ -69,13 +73,9 @@ function Footprints() {
             </div>
         );
     }
-
+    
     return (
         <div className="container mx-auto p-4 bg-gray-900 min-h-screen">
-            <header className="bg-white text-black p-4 text-left mb-4 rounded">
-                <h1 className="text-2xl font-bold">Dashabhuja</h1>
-                <p>Women Safety and Empowerm</p>
-            </header>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="p-4 border-b">
                     <h1 className="text-xl font-semibold">User Footprints</h1>
