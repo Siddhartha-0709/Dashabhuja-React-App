@@ -148,24 +148,13 @@ export default function ProductSubmissionForm() {
 
     return (
         <>
-            <div className="grid grid-cols-1 md:grid-cols-2 h-screen mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 ">
                 <div className="flex flex-col items-center justify-center text-center">
-                    <iframe
-                        src="https://lottie.host/embed/33adc41c-4b9d-4e82-b9bc-3eb6234d192a/4oxDM3fuIm.json"
-                        title="animation"
-                        className="w-3/4 md:w-1/2 h-3/4 md:h-1/2 mx-auto mb-6"
-                    ></iframe>
-                    <h1
-                        className="text-4xl md:text-6xl mb-6 text-white text-center"
-                        style={{ fontFamily: 'Samkaran', color: '#FF4545' }}
-                    >
-                        Dashabhuja
-                    </h1>
-                    <p className="text-grey-600 text-lg mb-6" style={{ fontFamily: 'Ubuntu', fontWeight: '300' }}>Empowering Women Entrepreneurs to Succeed</p>
                     <img src={commerce} alt="Commerce" className="w-full mb-6" />
+                    {/* <p className="text-grey-600 text-lg mb-6" style={{ fontFamily: 'Ubuntu', fontWeight: '300' }}>Empowering Women Entrepreneurs to Succeed</p> */}
                 </div>
 
-                <div className="max-w-full md:max-w-2xl p-6 bg-white rounded-lg shadow-lg mb-24 ">
+                <div className="max-w-full md:max-w-2xl p-6 bg-white rounded-lg shadow-lg mb-24 md:mb-0">
                     <h2
                         className="text-2xl font-bold mb-6 text-gray-800"
                         style={{ fontFamily: 'Ubuntu', fontWeight: '700' }}
@@ -178,7 +167,7 @@ export default function ProductSubmissionForm() {
                     >
                         At Dashabhuja, we celebrate and empower women entrepreneurs by providing a platform to showcase your unique products. Join our community of inspiring women-led businesses and reach a wider audience. Let's work together to make your business flourish and inspire others with your success story!
                     </p>
-                    <form onSubmit={handleSubmit} className="space-y-6 mb-24">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <FormField
                             label="Product Name"
                             icon={<Tag className="w-4 h-4" />}
@@ -308,11 +297,10 @@ export default function ProductSubmissionForm() {
                                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             ></textarea>
                         </div>
-
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full mb-24 px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            className="w-full px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                         >
                             {loading ? (
                                 <Loader2 className="animate-spin h-5 w-5 mx-auto" />

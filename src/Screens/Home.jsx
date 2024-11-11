@@ -4,6 +4,7 @@ import sos from '../assets/sos.png';
 import yoga from '../assets/yoga.png';
 import map1 from '../assets/map1.png';
 import reporting from '../assets/reporting.png';
+import qrcode from '../assets/qr-code.png';
 export default function App() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -18,7 +19,11 @@ export default function App() {
           <p className="text-xl text-gray-600" style={{ fontFamily: 'Ubuntu', fontWeight: '300' }}>
             Inspired by the Divine Strength of Maa Durga
           </p>
-          <button className="mt-6 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">Download Now</button>
+          <button className="mt-6 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
+          onClick={() => {
+            window.location.href = 'https://github.com/Siddhartha-0709/Dashabhuja/releases/tag/Version-1.0.0';
+          }}
+          >Download Now</button>
         </div>
         <div className="w-full md:w-1/2 h-96">
           <iframe
@@ -67,7 +72,7 @@ export default function App() {
               Scan the QR code below to download the app:
             </p>
             <img
-              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              src={qrcode}
               alt="Google Play Store Badge"
               width={200}
               height={60}
@@ -90,7 +95,7 @@ function FeatureCard({ title, description, imageSrc }) {
           </p>
         </div>
         <div className="md:w-1/2">
-          <img src={imageSrc} alt={title} className="object-cover w-full h-full" />
+          <img src={imageSrc} alt={title} className="w-96" />
         </div>
       </div>
     </div>
