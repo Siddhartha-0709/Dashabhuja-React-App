@@ -11,7 +11,7 @@ function App() {
         <header className="header bg-white flex items-center justify-between md:px-4 py-2 md:px-6 md:py-3">
           <div className="flex items-center">
             <img src={logo} alt="logo" className="w-12 h-12 mr-2" />
-            <div>
+            <div onClick={() => window.location.href = '/'} className="cursor-pointer">
               <h1 className="text-black md:text-3xl text-2xl" style={{ fontFamily: 'Samkaran', color: '#FF4545', top: 10, position: 'relative' }}>Dashabhuja</h1>
               <p className="text-black text-xs md:text-sm" style={{ fontFamily: 'Ubuntu', fontWeight: '300', color: '#000000', fontSize: 12 }}>Women Empowerment and Protection</p>
             </div>
